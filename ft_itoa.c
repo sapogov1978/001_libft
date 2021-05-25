@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brattles <brattles@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: brattles <brattles@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 02:06:34 by brattles          #+#    #+#             */
-/*   Updated: 2021/04/17 20:45:42 by brattles         ###   ########.fr       */
+/*   Updated: 2020/11/23 23:18:35 by brattles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,30 +27,30 @@ static int	ft_int_len(int n)
 	return (int_len);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*str;
-	int		vars[2];
+	int		int_len;
+	int		i;
 
-	vars[0] = 0;
-	vars[1] = ft_int_len(n);
+	i = 0;
 	if (n == INT_MIN)
 		return (ft_strdup("-2147483648"));
+	int_len = ft_int_len(n);
 	if (n < 0)
-		vars[1]++;
-	str = (char *)malloc(sizeof(char) * (vars[1] + 1));
-	if (!str)
+		int_len++;
+	if (!(str = (char *)malloc(sizeof(char) * (int_len + 1))))
 		return (NULL);
-	str[vars[1]] = 0;
+	str[int_len] = 0;
 	if (n < 0)
 	{
 		str[0] = '-';
 		n = n * -1;
-		vars[0]++;
+		i++;
 	}
-	while (vars[0] < vars[1]--)
+	while (i < int_len--)
 	{
-		str[vars[1]] = (n % 10) + '0';
+		str[int_len] = (n % 10) + '0';
 		n = n / 10;
 	}
 	return (str);

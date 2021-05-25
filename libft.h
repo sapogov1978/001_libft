@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brattles <brattles@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: brattles <brattles@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 15:01:44 by brattles          #+#    #+#             */
-/*   Updated: 2021/03/24 00:36:00 by brattles         ###   ########.fr       */
+/*   Updated: 2020/11/27 01:03:14 by brattles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,9 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <stdio.h>
 # include <limits.h>
 # include <unistd.h>
-
-typedef struct s_list	t_list;
-
-struct				s_list
-{
-	void			*content;
-	struct s_list	*next;
-};
 
 void	*ft_memset(void *start, int fill, size_t qty);
 void	ft_bzero(void *s, size_t n);
@@ -59,13 +52,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
-char	*ft_strncpy(char *dst, const char *src, size_t dstsize);
-double	ft_atof(const char *nptr);
-t_list	*ft_lstnew(void *content);
-t_list	*ft_lstlast(t_list *lst);
-void	ft_lstadd_back(t_list **lst, t_list *new);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-void	ft_lstdelone(t_list *lst, void (*del)(void *));
-void	ft_lstclear(t_list **lst, void (*del)(void *));
 
 #endif

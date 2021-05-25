@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brattles <brattles@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: brattles <brattles@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 02:52:42 by brattles          #+#    #+#             */
-/*   Updated: 2021/04/17 19:28:28 by brattles         ###   ########.fr       */
+/*   Updated: 2020/11/29 11:33:29 by brattles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ static int	ft_lines_qty(char const *s, char c)
 	return (lines_qty);
 }
 
-char	**ft_split(char const *s, char c)
+char		**ft_split(char const *s, char c)
 {
 	char	**split_table;
 	int		lines_qty;
@@ -75,15 +75,13 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	lines_qty = ft_lines_qty(s, c);
-	split_table = ft_calloc(lines_qty + 1, (sizeof(char *)));
-	if (!split_table)
+	if (!(split_table = ft_calloc(lines_qty + 1, (sizeof(char *)))))
 		return (NULL);
 	while (lines_qty--)
 	{
 		while (s[i] && s[i] == c)
 			i++;
-		split_table[j] = ft_substr(s, i, ft_line_len(s, i, c));
-		if (!split_table[j])
+		if (!(split_table[j] = ft_substr(s, i, ft_line_len(s, i, c))))
 			return (ft_putmmrback(split_table));
 		j++;
 		i = i + ft_line_len(s, i, c);

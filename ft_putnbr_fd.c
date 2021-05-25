@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brattles <brattles@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: brattles <brattles@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 10:55:51 by brattles          #+#    #+#             */
-/*   Updated: 2021/04/17 19:42:24 by brattles         ###   ########.fr       */
+/*   Updated: 2020/11/24 20:53:28 by brattles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void			ft_putnbr_fd(int n, int fd)
 {
 	long int	new_n;
 

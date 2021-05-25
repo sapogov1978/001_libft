@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: brattles <brattles@student.21-school.ru    +#+  +:+       +#+         #
+#    By: brattles <brattles@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/29 20:25:41 by brattles          #+#    #+#              #
-#    Updated: 2021/04/17 22:10:22 by brattles         ###   ########.fr        #
+#    Updated: 2020/11/26 01:43:53 by brattles         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,17 +49,7 @@ FUNCTIONS	= ft_memset.c \
 			  ft_substr.c \
 			  ft_strjoin.c \
 			  ft_strtrim.c \
-			  ft_split.c \
-			  ft_strncpy.c \
-			  ft_atof.c \
-			  ft_lstnew.c \
-			  ft_lstlast.c \
-			  ft_lstadd_back.c \
-			  ft_lstadd_front.c \
-			  ft_lstdelone.c \
-			  ft_lstclear.c \
-			  get_next_line.c \
-			  get_next_line_utils.c
+			  ft_split.c
 
 OBJ		= $(patsubst %.c, %.o, $(FUNCTIONS))
 D_FILE  = $(patsubst %.c, %.d, $(FUNCTIONS))

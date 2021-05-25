@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brattles <brattles@student.21-school.ru    +#+  +:+       +#+        */
+/*   By: brattles <brattles@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 14:18:35 by brattles          #+#    #+#             */
-/*   Updated: 2021/04/17 19:36:14 by brattles         ###   ########.fr       */
+/*   Updated: 2020/11/22 21:29:49 by brattles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,15 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char	*ptr;
+	void	*ptr;
 
-	ptr = (char *)malloc(nmemb * size);
-	if (!ptr)
+	if (nmemb * size > INT_MAX)
 		return (NULL);
-	ft_bzero(ptr, nmemb * size);
-	return ((void *)ptr);
+	ptr = (void*)malloc(nmemb * size);
+	if (ptr)
+	{
+		ft_bzero(ptr, nmemb * size);
+		return (ptr);
+	}
+	return (NULL);
 }
