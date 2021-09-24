@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brattles <brattles@student.42.fr>          +#+  +:+       +#+        */
+/*   By: brattles <brattles@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 02:52:42 by brattles          #+#    #+#             */
-/*   Updated: 2020/11/29 11:33:29 by brattles         ###   ########.fr       */
+/*   Updated: 2021/05/10 12:47:06 by brattles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	*ft_putmmrback(char **split_table)
+void	ft_putmmrback(char **split_table)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (split_table[i] != NULL)
@@ -23,7 +23,7 @@ static void	*ft_putmmrback(char **split_table)
 		i++;
 	}
 	free(split_table);
-	return (NULL);
+	split_table = NULL;
 }
 
 static int	ft_line_len(char const *s, int start, char c)
@@ -65,27 +65,31 @@ static int	ft_lines_qty(char const *s, char c)
 	return (lines_qty);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**split_table;
 	int		lines_qty;
-	int		i;
-	int		j;
+	int		i[2];
 
-	i = 0;
-	j = 0;
+	i[0] = 0;
+	i[1] = 0;
 	lines_qty = ft_lines_qty(s, c);
-	if (!(split_table = ft_calloc(lines_qty + 1, (sizeof(char *)))))
+	split_table = ft_calloc(lines_qty + 1, (sizeof(char *)));
+	if (!split_table)
 		return (NULL);
 	while (lines_qty--)
 	{
-		while (s[i] && s[i] == c)
-			i++;
-		if (!(split_table[j] = ft_substr(s, i, ft_line_len(s, i, c))))
-			return (ft_putmmrback(split_table));
-		j++;
-		i = i + ft_line_len(s, i, c);
+		while (s[i[0]] && s[i[0]] == c)
+			i[0]++;
+		split_table[i[1]] = ft_substr(s, i[0], ft_line_len(s, i[0], c));
+		if (!split_table[i[1]])
+		{
+			ft_putmmrback(split_table);
+			return (NULL);
+		}
+		i[1]++;
+		i[0] = i[0] + ft_line_len(s, i[0], c);
 	}
-	split_table[j] = NULL;
+	ft_memclean((void *)&split_table[i[1]]);
 	return (split_table);
 }

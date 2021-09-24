@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brattles <brattles@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/10 01:02:56 by brattles          #+#    #+#             */
-/*   Updated: 2021/04/17 20:22:25 by brattles         ###   ########.fr       */
+/*   Created: 2021/03/09 23:09:52 by brattles          #+#    #+#             */
+/*   Updated: 2021/03/09 23:11:15 by brattles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	char	*c_s;
-
-	c_s = (char *)(s + ft_strlen(s));
-	while (*c_s != c)
+	if (lst)
 	{
-		if (*c_s == '\0' && !c)
-			return (c_s);
-		if (c_s == s)
-			return (NULL);
-		c_s--;
+		del(lst->content);
+		free(lst);
 	}
-	return (c_s);
 }

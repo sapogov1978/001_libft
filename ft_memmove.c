@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brattles <brattles@student.42.fr>          +#+  +:+       +#+        */
+/*   By: brattles <brattles@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 15:20:24 by brattles          #+#    #+#             */
-/*   Updated: 2020/11/25 23:36:02 by brattles         ###   ########.fr       */
+/*   Updated: 2021/04/17 20:24:22 by brattles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*c_dest;
 	unsigned char	*c_src;

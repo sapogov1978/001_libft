@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brattles <brattles@student.42.fr>          +#+  +:+       +#+        */
+/*   By: brattles <brattles@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 00:11:43 by brattles          #+#    #+#             */
-/*   Updated: 2020/11/22 21:46:37 by brattles         ###   ########.fr       */
+/*   Updated: 2021/04/17 20:21:19 by brattles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	char	*c_s;
 

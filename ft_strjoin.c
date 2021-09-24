@@ -3,40 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brattles <brattles@student.42.fr>          +#+  +:+       +#+        */
+/*   By: brattles <brattles@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/22 01:39:39 by brattles          #+#    #+#             */
-/*   Updated: 2020/11/25 23:21:57 by brattles         ###   ########.fr       */
+/*   Updated: 2021/04/17 19:50:01 by brattles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*strjoin;
-	int		s1_len;
-	int		s2_len;
-	int		i;
-	int		j;
+	char			*strjoin;
+	int				i;
+	int				j;
+	int				len[2];
 
 	i = 0;
 	j = 0;
-	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
-	if (!(strjoin = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1))))
+	len[0] = ft_strlen(s1);
+	len[1] = ft_strlen(s2);
+	strjoin = (char *)malloc(sizeof(char) * (len[0] + len[1] + 1));
+	if (!strjoin)
 		return (NULL);
-	while (i < s1_len)
+	while (s1 && i < len[0])
 	{
 		strjoin[i] = s1[i];
 		i++;
 	}
-	while (j < s2_len)
+	while (s2 && j < len[1])
 	{
 		strjoin[i] = s2[j];
 		i++;
 		j++;
 	}
-	strjoin[s1_len + s2_len] = '\0';
+	strjoin[len[0] + len[1]] = '\0';
 	return (strjoin);
 }

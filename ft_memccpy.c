@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: brattles <brattles@student.42.fr>          +#+  +:+       +#+        */
+/*   By: brattles <brattles@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 20:59:56 by brattles          #+#    #+#             */
-/*   Updated: 2020/11/24 02:01:56 by brattles         ###   ########.fr       */
+/*   Updated: 2021/04/17 20:22:33 by brattles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		*ft_memccpy(void *dest, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	unsigned int	i;
 

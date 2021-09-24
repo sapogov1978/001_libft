@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memclean.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brattles <brattles@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/10 01:02:56 by brattles          #+#    #+#             */
-/*   Updated: 2021/04/17 20:22:25 by brattles         ###   ########.fr       */
+/*   Created: 2021/05/10 12:36:21 by brattles          #+#    #+#             */
+/*   Updated: 2021/05/10 12:48:28 by brattles         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_memclean(void **ptr)
 {
-	char	*c_s;
-
-	c_s = (char *)(s + ft_strlen(s));
-	while (*c_s != c)
+	if (ptr != NULL && *ptr != NULL && (char *)*ptr)
 	{
-		if (*c_s == '\0' && !c)
-			return (c_s);
-		if (c_s == s)
-			return (NULL);
-		c_s--;
+		free(*ptr);
+		*ptr = NULL;
 	}
-	return (c_s);
 }

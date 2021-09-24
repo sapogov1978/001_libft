@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: brattles <brattles@student.42.fr>          +#+  +:+       +#+         #
+#    By: brattles <brattles@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/29 20:25:41 by brattles          #+#    #+#              #
-#    Updated: 2020/11/26 01:43:53 by brattles         ###   ########.fr        #
+#    Updated: 2021/05/10 12:39:13 by brattles         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,11 @@
 .SUFFIXES:
 .SUFFIXES: .c .o .h .d
 
-NAME 	= libft.a
+# ifdef _APPLE_
+ 	NAME 	= libft.a
+# else
+#NAME 	= libft.lib
+# endif
 
 FUNCTIONS	= ft_memset.c \
 			  ft_bzero.c \
@@ -49,7 +53,19 @@ FUNCTIONS	= ft_memset.c \
 			  ft_substr.c \
 			  ft_strjoin.c \
 			  ft_strtrim.c \
-			  ft_split.c
+			  ft_split.c \
+			  ft_strncpy.c \
+			  ft_atof.c \
+			  ft_lstnew.c \
+			  ft_lstlast.c \
+			  ft_lstadd_back.c \
+			  ft_lstadd_front.c \
+			  ft_lstdelone.c \
+			  ft_lstclear.c \
+			  get_next_line.c \
+			  get_next_line_utils.c \
+			  ft_isspace.c \
+			  ft_memclean.c
 
 OBJ		= $(patsubst %.c, %.o, $(FUNCTIONS))
 D_FILE  = $(patsubst %.c, %.d, $(FUNCTIONS))
