@@ -72,8 +72,38 @@ This project consists of coding basic C functions (see below), which are then co
 * [`ft_lstdelone`](ft_lstdelone.c)	- delete element from list.
 * [`ft_lstclear`](ft_lstclear.c)	- delete sequence of elements of list from a starting point.
 
-### Later added funtions
+### Later added functions
 
 * [`ft_atof`](ft_atof.c)		- convert ASCII string to integer.
 * [`get_next_line`](get_next_line.c)	- returning NULL-terminated line while reading buffer by given size chunks.
 * [`ft_memclean`](ft_memclean.c)	- free memory allocated for a pointer. 
+
+## Usage
+
+### Requirements
+
+The library is written in C language and thus needs the **`gcc` compiler** and some standard **C libraries** to run.
+
+### Instructions
+
+**1. Compiling the library**
+
+To compile the library, run:
+
+```shell
+$ cd path/to/libft && make
+```
+
+**2. Using it in your code**
+
+To use the library functions in your code, simply include its header:
+
+```C
+#include "libft.h"
+```
+
+and, when compiling your code, add the required flags:
+
+```shell
+-lft -L path/to/libft.a -I path/to/libft.h
+```
