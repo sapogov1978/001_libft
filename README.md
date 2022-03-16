@@ -66,15 +66,13 @@ This project consists of coding basic C functions (see below), which are then co
 ### Bonus functions (not mandatory by the project's subject).
 
 * [`ft_lstnew`](ft_lstnew.c)		- create new list.
-* [`ft_lstsize`](ft_lstsize.c)		- count elements of a list.
 * [`ft_lstlast`](ft_lstlast.c)		- find last element of list.
 * [`ft_lstadd_back`](ft_lstadd_back.c)	- add new element at end of list.
 * [`ft_lstadd_front`](ft_lstadd_front.c)	- add new element at beginning of list.
 * [`ft_lstdelone`](ft_lstdelone.c)	- delete element from list.
 * [`ft_lstclear`](ft_lstclear.c)	- delete sequence of elements of list from a starting point.
-* [`ft_lstiter`](ft_lstiter.c)		- apply function to content of all list's elements.
-* [`ft_lstmap`](ft_lstmap.c)		- apply function to content of all list's elements into new list.
 
 ### Later added funtions
 
-* [`ft_atof`](001_libft/ft_atof.c) *		- convert ASCII string to integer.
+* [`ft_atof`](ft_atof.c)		- convert ASCII string to integer.
+* [`get_next_line`](get_next_line.c)	- returning NULL-terminated line while reading buffer by given size chunks 
