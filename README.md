@@ -75,4 +75,5 @@ This project consists of coding basic C functions (see below), which are then co
 ### Later added funtions
 
 * [`ft_atof`](ft_atof.c)		- convert ASCII string to integer.
-* [`get_next_line`](get_next_line.c)	- returning NULL-terminated line while reading buffer by given size chunks 
+* [`get_next_line`](get_next_line.c)	- returning NULL-terminated line while reading buffer by given size chunks.
+* [`ft_memclean`](ft_memclean.c)	- free memory allocated for a pointer. 
