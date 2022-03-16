@@ -17,8 +17,6 @@ This project consists of coding basic C functions (see below), which are then co
 * [`ft_isascii`](ft_isascii.c)	- test for ASCII character.
 * [`ft_isalnum`](ft_isalnum.c)	- alphanumeric character test.
 * [`ft_isalpha`](ft_isalpha.c)	- alphabetic character test.
-* [`ft_islower`](ft_islower.c) 	- lower-case character test.
-* [`ft_isupper`](ft_isupper.c) 	- upper-case character test.
 * [`ft_isdigit`](ft_isdigit.c)	- decimal-digit character test.
 * [`ft_isprint`](ft_isprint.c)	- printing character test (space character inclusive).
 * [`ft_isspace`](ft_isspace.c) 	- white-space character test.
