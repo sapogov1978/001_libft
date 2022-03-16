@@ -14,16 +14,16 @@ This project consists of coding basic C functions (see below), which are then co
 
 ### Functions from `<ctype.h>` library
 
-* [`ft_isascii`](001_libft/ft_isascii.c)	- test for ASCII character.
-* [`ft_isalnum`](001_libft/ft_isalnum.c)	- alphanumeric character test.
-* [`ft_isalpha`](001_libft/ft_isalpha.c)	- alphabetic character test.
-* [`ft_islower`](001_libft/ft_islower.c) 	- lower-case character test.
-* [`ft_isupper`](001_libft/ft_isupper.c) 	- upper-case character test.
-* [`ft_isdigit`](001_libft/ft_isdigit.c)	- decimal-digit character test.
-* [`ft_isprint`](001_libft/ft_isprint.c)	- printing character test (space character inclusive).
-* [`ft_isspace`](001_libft/ft_isspace.c) 	- white-space character test.
-* [`ft_tolower`](001_libft/ft_tolower.c)	- upper case to lower case letter conversion.
-* [`ft_toupper`](001_libft/ft_toupper.c)	- lower case to upper case letter conversion.
+* [`ft_isascii`](ft_isascii.c)	- test for ASCII character.
+* [`ft_isalnum`](ft_isalnum.c)	- alphanumeric character test.
+* [`ft_isalpha`](ft_isalpha.c)	- alphabetic character test.
+* [`ft_islower`](ft_islower.c) 	- lower-case character test.
+* [`ft_isupper`](ft_isupper.c) 	- upper-case character test.
+* [`ft_isdigit`](ft_isdigit.c)	- decimal-digit character test.
+* [`ft_isprint`](ft_isprint.c)	- printing character test (space character inclusive).
+* [`ft_isspace`](ft_isspace.c) 	- white-space character test.
+* [`ft_tolower`](ft_tolower.c)	- upper case to lower case letter conversion.
+* [`ft_toupper`](ft_toupper.c)	- lower case to upper case letter conversion.
 
 ### Functions from `<stdlib.h>` library
 
