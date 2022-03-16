@@ -52,13 +52,9 @@ This project consists of coding basic C functions (see below), which are then co
 
 ### Non-standard functions
 
-* [`ft_putchar`](ft_putchar.c) *	- output a character to stdout.
 * [`ft_putchar_fd`](ft_putchar_fd.c)	- output a character to given file.
-* [`ft_putstr`](ft_putstr.c) *		- output string to stdout.
 * [`ft_putstr_fd`](ft_putstr_fd.c)	- output string to given file.
-* [`ft_putendl`](ft_putendl.c) *	- output string to stdout with newline.
 * [`ft_putendl_fd`](ft_putendl_fd.c)	- output string to given file with newline.
-* [`ft_putnbr`](ft_putnbr.c) *		- output integer to stdout.
 * [`ft_putnbr_fd`](ft_putnbr_fd.c)	- output integer to given file.
 * [`ft_itoa`](ft_itoa.c)		- convert integer to ASCII string.
 * [`ft_substr`](ft_substr.c)		- extract substring from string.
