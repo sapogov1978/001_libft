@@ -4,7 +4,6 @@
 >_This project is your very first project as a student at 42. <br>You will need to recode a few functions of the C standard library as well as some other utility functions that you will use during your whole cursus._
 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/sapogov1978/001_libft?style=for-the-badge)
-![GitHub repo file count](https://img.shields.io/github/directory-file-count/sapogov1978/001_libft?style=for-the-badge)
 ![Lines of code](https://img.shields.io/tokei/lines/github/sapogov1978/001_libft?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/sapogov1978/001_libft?style=for-the-badge)
 ![GitHub top language](https://img.shields.io/github/languages/top/sapogov1978/001_libft?style=for-the-badge)
