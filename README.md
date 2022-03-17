@@ -1,14 +1,12 @@
 # 001_libft
 ## Recode a functions of the C standard library.
 
-_This project is your very first project as a student at 42. <br>You will need to recode a few functions of the C standard library as well as some other utility functions that you will use during your whole cursus._
+>_This project is your very first project as a student at 42. <br>You will need to recode a few functions of the C standard library as well as some other utility functions that you will use during your whole cursus._
 
-<p>
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/sapogov1978/001_libft?style=for-the-badge?color=blue)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/sapogov1978/001_libft?style=for-the-badge)
 	<img alt="Number of lines of code" src="https://img.shields.io/tokei/lines/github/sapogov1978/001_libft?color=blue" />
 	<img alt="Code language count" src="https://img.shields.io/github/languages/count/sapogov1978/001_libft?color=blue" />
 	<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/sapogov1978/001_libft?color=blue" />
-</p>
 
 This project consists of coding basic C functions (see below), which are then compiled into a library for use in other projects of the cursus.
 
